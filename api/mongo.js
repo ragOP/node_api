@@ -7,9 +7,9 @@ async function getData()
     let res=await client.connect()
     db=res.db(dbname)
     collection=db.collection('products');
-    let data= collection.find({}).toArray();
-    let data1= collection.find({name:"Apples"}).toArray();
-    Promise.all
+    let data=await collection.find({}).toArray();
+   
+
     console.log(data)
 
 }
